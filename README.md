@@ -1,2 +1,2 @@
 # rock-paper-scissors
-This a rock-paper-scissors game made along with The Odin Project
+This is a rock-paper-scissors game made along with The Odin Project
