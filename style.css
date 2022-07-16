@@ -36,7 +36,7 @@ button {
 
 .content {
     padding-top: 150px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
 
     background-color: salmon;
     background: url(./images/sky-background.gif);
@@ -48,11 +48,13 @@ button {
 }
 
 .content1 {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 180px;
+    padding-bottom: 100px;
 }
 
 .content2 {
+    padding-left: 72px;
+    padding-right: 36px;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -77,17 +79,17 @@ button {
 }
 
 .buttons {
-    height: 60px;
+    height: auto;
 }
 
 .panel {
-    font-size: 12px;
-    margin-top: 1px;
+    font-size: 18px;
+    margin-top: 40px;
     height: 144px;
 }
 
 .announcer {
-    font-size: 12px;
+    font-size: 18px;
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
@@ -101,10 +103,9 @@ button {
     size: 1.2;
 }
 
-.scoreboard {
-    display: block;
-}
-
-.winner {
-    display: block;
+.footer {
+    padding-top: 30px;
+    padding-bottom: 45px;
+    text-align: center;
+    background-color: #323232 ;
 }
