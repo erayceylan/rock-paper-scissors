@@ -3,10 +3,36 @@
     <head>
         <meta charset="utf-8">
         <title>Rock Paper Scissors </title>
-        <script src="./script.js"></script>
+        <link rel="stylesheet" href="./style.css">
     </head>
 
     <body>
+        <div class="header">Bee-Fish-Bear Game!</div>
+        <div class="content">
+            <div class="content1">
+                <div class="text">Pick your animal</div>
+                <div class="animals">
+                    <img class="bee" src="./images/bee.png">
+                    <img class="fish" src="./images/fish.png">
+                    <img class="bear" src="./images/bear.png">
+                </div>
+            </div>
+            <div class="content2">
+                <div class="buttons">
+                    <button class="start">start</button>
+                    <button class="newgame">new game</button>
+                    <button class="music">music on</button>
+                </div>
+                <div class="panel"></div>
+                <div class="announcer">
+                    <div class="scoreboard">You:0 Nature:0</div>
+                    <div class="winner">Winner is Computer!</div>
+                </div>
+            </div>
+        </div>
         
+        <audio src="./background-music.mp3" loop="true"></audio>
+        <script src="./game.js"></script>
+
     </body>
-</html>
+</html> 

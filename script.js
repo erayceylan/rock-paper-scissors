@@ -1,5 +1,3 @@
-/* Helper Functions */
-
 function computerPick() {
     let randomNumber = Math.floor(Math.random()*100)
     return randomNumber
@@ -84,9 +82,42 @@ function game() {
     console.log("RESULTS: " + "Computer: " + computer + " Player: " + player)
 }
 
-console.log("Hello World!")
-console.log("...")
-console.log("Wanna play a game?")
 
-game()
 
+const audio = new Audio("./background-music.mp3"); audio.loop = true;
+
+const music = document.querySelector(".music");
+const start = document.querySelector(".start")
+
+const panel = document.querySelector(".panel");
+
+let gameon = false;
+
+const bee = document.querySelector(".bee");
+const fish = document.querySelector(".fish")
+
+
+panel.innerHTML = 'Welcome to game of "Bee-Fish-Bear", press START to play...'
+
+bee.addEventListener('click',(e) => {
+    e.stopPropagation();
+    console.log(e.target);
+    if (e.target == bee) console.log("it works");
+
+    })
+music.addEventListener('click', (e) => {
+    console.log(e.target.innerHTML)
+    if (e.target.innerHTML == "music on") {
+        audio.play()
+        e.target.innerHTML = "music off"
+    }
+    else {
+        audio.pause()
+        e.target.innerHTML = "music on"
+    }
+});
+
+start.addEventListener('click',gameStart);
+
+function gameStart() {
+    if (!gameon) {panel.innerHTML = "Pick your animal<br>..."; gameon = true;};}
