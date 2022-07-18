@@ -76,6 +76,12 @@ button {
     background-color: rgba(255, 218, 110, 0.3);
     border-radius: 25%;
     padding: 12px;
+    transition: all 0.3s;
+}
+
+.selected {
+    background-color:  rgba(255, 218, 110, 0.6);
+    size: 1.2;
 }
 
 .buttons {
@@ -94,13 +100,6 @@ button {
     justify-content: space-between;
     padding-top: 12px;
     padding-right: 8px;
-}
-
-.bear:hover,
-.fish:hover,
-.bee:hover {
-    background-color:  rgba(255, 218, 110, 0.6);
-    size: 1.2;
 }
 
 .footer {

@@ -13,6 +13,9 @@ newgame.addEventListener("click",newGame);
 newGame();
 
 function newGame() {
+    /* This line fixes a bug when player selects new game without choosing animal and then choose an animal without selecting start button */
+    animals.forEach(animal => animal.removeEventListener('click', playRound))
+
     gameStart();
     panel.innerHTML = 'Welcome to game of "Bee-Fish-Bear", press START to play...';
     start.addEventListener('click', playGame, {once: true});
@@ -35,6 +38,9 @@ function playRound(e) {
 
         game.playerChoice = this.className;
         game.computerChoice = computerPlay();
+
+        this.classList.add("selected")
+        this.ontransitionend = () => {this.classList.remove('selected');};
 
         panel.innerHTML += `You chose ${game.playerChoice}<br>`;
         panel.innerHTML += `Computer chose ${game.computerChoice}<br>`;
